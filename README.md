@@ -5,16 +5,16 @@ TPM - 3/3/19
 
 Refactored EPCEncoder into RFIDEncoder and included all the sub encoders (EPCEncoder, TCINEncoder, and TIAIEncoder), as well as the converter, in the umbrella header.
 
-EPCEncoder - encodes UPCs in GS1 compliant EPC encodings
-TCINEncoder - encodes retail TCINs in non GS1 compliant RFID tags for Target internal use only
-TIAIEncoder - encodes non retail TIAIs in non GS1 compliant RFID tags for Target internal use only
+    - EPCEncoder - encodes UPCs in GS1 compliant EPC encodings
+    - TCINEncoder - encodes retail TCINs in non GS1 compliant RFID tags for Target internal use only
+    - TIAIEncoder - encodes non retail TIAIs in non GS1 compliant RFID tags for Target internal use only
 
 To include these, you now need to use the following construct:
 
     #import <RFIDEncoder/EPCEncoder.h>
     #import <RFIDEncoder/TCINEncoder.h>
     #import <RFIDEncoder/TIAIEncoder.h>
-    #import <RFIDEncoder/Converter.h>s
+    #import <RFIDEncoder/Converter.h>
 
 Or for them all:
 
