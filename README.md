@@ -50,15 +50,14 @@ I created this as a clean Cocoa Touch Framework with the latest version of XCode
         - Add New Run Script Phase: Copy Framework to Local Build Directory
         - Paste the following in the /bin/sh script:
         
-            \# copy the framework to the build subdirectory
-            set -e
+               set -e
         
-            echo "Copying Framework to Local build directory"
+               echo "Copying Framework to Local build directory"
         
-            export FRAMEWORK_LOCN="${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework"
+               export FRAMEWORK_LOCN="${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework"
         
-            rm -rf build/*
-            cp -a ${FRAMEWORK_LOCN} build/.
+               rm -rf build/*
+               cp -a ${FRAMEWORK_LOCN} build/.
         
 
 ### BUILD INSTRUCTIONS: FRAMEWORK TARGET ONLY
