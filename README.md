@@ -5,9 +5,9 @@ TPM - 3/3/19
 
 Refactored EPCEncoder into RFIDEncoder and included all the sub encoders (EPCEncoder, TCINEncoder, and TIAIEncoder), as well as the converter, in the umbrella header.
 
-    - EPCEncoder - encodes UPCs in GS1 compliant EPC encodings
-    - TCINEncoder - encodes retail TCINs in non GS1 compliant RFID tags for Target internal use only
-    - TIAIEncoder - encodes non retail TIAIs in non GS1 compliant RFID tags for Target internal use only
+   - EPCEncoder - encodes UPCs in GS1 compliant EPC encodings
+   - TCINEncoder - encodes retail TCINs in non GS1 compliant RFID tags for Target internal use only
+   - TIAIEncoder - encodes non retail TIAIs in non GS1 compliant RFID tags for Target internal use only
 
 To include these, you now need to use the following construct:
 
@@ -29,12 +29,12 @@ IMPORTANT NOTE: When you add this framework to another project, make sure you in
 
 TPM - 3/2/19
 
-PROJECT SETUP NOTES
+### PROJECT SETUP NOTES
 
 I created this as a clean Cocoa Touch Framework with the latest version of XCode, which skipped most of the notes below.  However, I still did the following:
-    - To build a fat framework that includes the older armv7, armv7s, i386, as well as X86_64 and arm64, you need to set an iOS Deployment Target before v10
-        - I chose a target of 8.3
-    - Under RFIDEncoder Target --> Build Settings (All):
+   - To build a fat framework that includes the older armv7, armv7s, i386, as well as X86_64 and arm64, you need to set an iOS Deployment Target before v10
+       - I chose a target of 8.3
+   - Under RFIDEncoder Target --> Build Settings (All):
          - Architectures: Click $(ARCHS_STANDARD) and select other
          - Add the following:
             -$(ARCHS_STANDARD)
@@ -51,28 +51,28 @@ I created this as a clean Cocoa Touch Framework with the latest version of XCode
         - Add New Run Script Phase: Copy Framework to Local Build Directory
         - Paste the following in the /bin/sh script:
         
-        # copy the framework to the build subdirectory
-        set -e
+            \# copy the framework to the build subdirectory
+            set -e
         
-        echo "Copying Framework to Local build directory"
+            echo "Copying Framework to Local build directory"
         
-        export FRAMEWORK_LOCN="${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework"
+            export FRAMEWORK_LOCN="${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework"
         
-        rm -rf build/*
-        cp -a ${FRAMEWORK_LOCN} build/.
+            rm -rf build/*
+            cp -a ${FRAMEWORK_LOCN} build/.
         
 
-BUILD INSTRUCTIONS: FRAMEWORK TARGET ONLY
+### BUILD INSTRUCTIONS: FRAMEWORK TARGET ONLY
 
 Follow these instructions when building the framework to the project build directory:
-    - Connect an iPhone and select it as the build target (not a simulator)
-    - Select RFIDEncoder.framework and build it: cmd-b
-    - Right click on the framework and select: show in finder.
-        - Note that the path now goes through Debug-iphoneos (Arm-64)
-        - If you compile with a simulator selected, you'll see the path goes through Debug-iphonesimulator (X86...)
+   - Connect an iPhone and select it as the build target (not a simulator)
+   - Select RFIDEncoder.framework and build it: cmd-b
+   - Right click on the framework and select: show in finder.
+       - Note that the path now goes through Debug-iphoneos (Arm-64)
+       - If you compile with a simulator selected, you'll see the path goes through Debug-iphonesimulator (X86...)
 
 
-UNIVERSAL FRAMEWORK SETUP NOTES
+### UNIVERSAL FRAMEWORK SETUP NOTES
 
 I decided to create a fat framework, based not on the original wenderlich tutorial, but the following:
 
@@ -140,12 +140,12 @@ Steps:
             # Step 8. Check it with the lipo command for architectures
             xcrun lipo -info ${PROJECT_DIR}/build-universal/${PROJECT_NAME}.framework/${PROJECT_NAME}
 
-BUILD INSTRUCTIONS: UNIVERSAL FRAMEWORK TARGET
+### BUILD INSTRUCTIONS: UNIVERSAL FRAMEWORK TARGET
 
 Do the following to build the universal fat framework:
-    - Change to the scheme: Product --> Scheme --> RFIDEncoderUniversal
-    - Build it: cmd-b
-    - The universal fat framework will be in the project build-universal directory
+   - Change to the scheme: Product --> Scheme --> RFIDEncoderUniversal
+   - Build it: cmd-b
+   - The universal fat framework will be in the project build-universal directory
     
 Embed this framework in other projects to make sure all targets are available.
 
