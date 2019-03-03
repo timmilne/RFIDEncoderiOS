@@ -21,10 +21,9 @@ Or for them all:
     #import <RFIDEncoder.h>
 
 
-IMPORTANT NOTE: When you add this framework to another project, make sure you include it in:
-    Project Target --> General --> Embedded Binaries
-        -- OR --
-    Build Phases --> Embed Frameworks
+IMPORTANT NOTE: When you add this framework to another project, make sure you include it in one of the following:
+- Project Target --> General --> Embedded Binaries
+- Build Phases --> Embed Frameworks
 
 
 TPM - 3/2/19
