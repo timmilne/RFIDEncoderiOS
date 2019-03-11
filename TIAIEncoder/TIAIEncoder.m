@@ -47,9 +47,9 @@
 - (void)withAssetRef:(NSString *)assetRefDec
          assetIDChar:(NSString *)assetIDChar {
     
-    // Set the inputs
+    // Set the inputs, uppercase only
     [self setAsset_id_dec:@""];
-    [self setAsset_id_char:assetIDChar];
+    [self setAsset_id_char:[assetIDChar uppercaseString]];
     
     // Make sure the inputs are not too long
     if ([_asset_id_char length] > 12) {
@@ -70,10 +70,10 @@
     // Have we done this?
     if (_convert == nil) _convert = [Converter alloc];
     
-    // Set the inputs
+    // Set the inputs, upper case only
     [self setAsset_id_dec:@""];
     [self setAsset_id_char:@""];
-    [self setAsset_id_hex:assetIDHex];
+    [self setAsset_id_hex:[assetIDHex uppercaseString]];
     
     // Make sure the inputs are not too long
     if ([_asset_id_hex length] > 18) {
