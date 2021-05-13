@@ -75,6 +75,19 @@
     XCTAssertEqualObjects(_test_tiai_uri , [_encode tiai_uri],      @"tiaiWithAssetIDDec: Test 3 Part 3 Failed");
     XCTAssertEqualObjects(_test_empty    , [_encode asset_id_char], @"tiaiWithAssetIDDec: Test 3 Part 4 Failed");
     XCTAssertTrue([[_encode tiai_bin] length] == 96,                @"tiaiWithAssetIDDec: Test 3 Part 5 Failed");
+    
+    _asset_ref = @"17";
+    _asset_id  = @"91055105001418913751";
+    [_encode withAssetRef:_asset_ref assetIDDec:_asset_id];
+    _test_tiai_bin = @"000010100000000000010001000001001110111110100100101101111001000101110011011101111111011111010111";
+    _test_tiai_hex = @"0A001104EFA4B7917377F7D7";
+    _test_tiai_uri = @"urn:epc:tag:tiai-a-96:0.17.91055105001418913751";
+    
+    XCTAssertEqualObjects(_test_tiai_bin , [_encode tiai_bin],      @"tiaiWithAssetIDDec: Test 4 Part 1 Failed");
+    XCTAssertEqualObjects(_test_tiai_hex , [_encode tiai_hex],      @"tiaiWithAssetIDDec: Test 4 Part 2 Failed");
+    XCTAssertEqualObjects(_test_tiai_uri , [_encode tiai_uri],      @"tiaiWithAssetIDDec: Test 4 Part 3 Failed");
+    XCTAssertEqualObjects(_test_empty    , [_encode asset_id_char], @"tiaiWithAssetIDDec: Test 4 Part 4 Failed");
+    XCTAssertTrue([[_encode tiai_bin] length] == 96,                @"tiaiWithAssetIDDec: Test 4 Part 5 Failed");
 }
 
 - (void)testWithTiaiChar{

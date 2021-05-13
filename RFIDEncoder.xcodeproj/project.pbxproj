@@ -38,6 +38,9 @@
 		B7227C24222B1C6F00A81EDC /* TCINEncoderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7227C23222B1C6F00A81EDC /* TCINEncoderTests.m */; };
 		B7227C26222B1C7D00A81EDC /* TIAIEncoderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7227C25222B1C7D00A81EDC /* TIAIEncoderTests.m */; };
 		B7227C28222B1CA300A81EDC /* ConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7227C27222B1CA300A81EDC /* ConverterTests.m */; };
+		B7DE4B86264D0BB900C8E1D7 /* BigInt.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DE4B84264D0BB900C8E1D7 /* BigInt.m */; };
+		B7DE4B87264D0BB900C8E1D7 /* BigInt.m in Sources */ = {isa = PBXBuildFile; fileRef = B7DE4B84264D0BB900C8E1D7 /* BigInt.m */; };
+		B7DE4B88264D0BB900C8E1D7 /* BigInt.h in Headers */ = {isa = PBXBuildFile; fileRef = B7DE4B85264D0BB900C8E1D7 /* BigInt.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,8 @@
 		B7227C23222B1C6F00A81EDC /* TCINEncoderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCINEncoderTests.m; sourceTree = "<group>"; };
 		B7227C25222B1C7D00A81EDC /* TIAIEncoderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIAIEncoderTests.m; sourceTree = "<group>"; };
 		B7227C27222B1CA300A81EDC /* ConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConverterTests.m; sourceTree = "<group>"; };
+		B7DE4B84264D0BB900C8E1D7 /* BigInt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigInt.m; sourceTree = "<group>"; };
+		B7DE4B85264D0BB900C8E1D7 /* BigInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigInt.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +105,7 @@
 				B7227C17222B1C3700A81EDC /* TCINEncoder */,
 				B7227C1C222B1C3C00A81EDC /* TIAIEncoder */,
 				B7227C06222B1C1A00A81EDC /* Converter */,
+				B7DE4B83264D0BB900C8E1D7 /* BigInt */,
 				B7227C12222B1C3000A81EDC /* SerialNumberGenerator */,
 				B7227BF9222B1AC600A81EDC /* RFIDEncoderTests */,
 				B7227BED222B1AC600A81EDC /* Products */,
@@ -182,6 +188,15 @@
 			path = TIAIEncoder;
 			sourceTree = "<group>";
 		};
+		B7DE4B83264D0BB900C8E1D7 /* BigInt */ = {
+			isa = PBXGroup;
+			children = (
+				B7DE4B85264D0BB900C8E1D7 /* BigInt.h */,
+				B7DE4B84264D0BB900C8E1D7 /* BigInt.m */,
+			);
+			path = BigInt;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -191,6 +206,7 @@
 			files = (
 				B7227BFD222B1AC600A81EDC /* RFIDEncoder.h in Headers */,
 				B7227C0F222B1C2200A81EDC /* EPCEncoder.h in Headers */,
+				B7DE4B88264D0BB900C8E1D7 /* BigInt.h in Headers */,
 				B7227C1B222B1C3700A81EDC /* TCINEncoder.h in Headers */,
 				B7227C1F222B1C3C00A81EDC /* TIAIEncoder.h in Headers */,
 				B7227C09222B1C1A00A81EDC /* Converter.h in Headers */,
@@ -340,6 +356,7 @@
 			files = (
 				B7227C16222B1C3000A81EDC /* SerialNumberGenerator.m in Sources */,
 				B7227C0A222B1C1A00A81EDC /* Converter.m in Sources */,
+				B7DE4B86264D0BB900C8E1D7 /* BigInt.m in Sources */,
 				B7227C1A222B1C3700A81EDC /* TCINEncoder.m in Sources */,
 				B7227C10222B1C2200A81EDC /* EPCEncoder.m in Sources */,
 				B7227C20222B1C3C00A81EDC /* TIAIEncoder.m in Sources */,
@@ -352,6 +369,7 @@
 			files = (
 				B7227BFB222B1AC600A81EDC /* RFIDEncoderTests.m in Sources */,
 				B7227C22222B1C6200A81EDC /* EPCEncoderTests.m in Sources */,
+				B7DE4B87264D0BB900C8E1D7 /* BigInt.m in Sources */,
 				B7227C24222B1C6F00A81EDC /* TCINEncoderTests.m in Sources */,
 				B7227C28222B1CA300A81EDC /* ConverterTests.m in Sources */,
 				B7227C26222B1C7D00A81EDC /* TIAIEncoderTests.m in Sources */,
