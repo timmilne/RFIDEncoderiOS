@@ -1,3 +1,5 @@
+# Deprecated - use RFIDEncoderXC instead
+
 # RFIDEncoderiOS
 RFIDEncoder lib and framework for iOS, includes Converter.
 
